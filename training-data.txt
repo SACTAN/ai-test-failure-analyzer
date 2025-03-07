@@ -1,0 +1,3 @@
+element_not_found NoSuchElementException: Unable to locate element
+network_issue ConnectException: Connection refused
+assertion_failure Expected 200 but found 404

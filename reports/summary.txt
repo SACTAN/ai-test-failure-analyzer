@@ -1,0 +1,12 @@
+Test Failure Analysis Summary
+==============================
+Test: testCheckout
+Category: name
+Confidence: 4.76%
+Solution: Review stack trace for patterns
+
+Test: testPayment
+Category: name
+Confidence: 4.76%
+Solution: Review stack trace for patterns
+
