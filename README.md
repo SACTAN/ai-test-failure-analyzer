@@ -26,77 +26,63 @@ git clone https://github.com/yourusername/ai-test-failure-analysis.git
 cd ai-test-failure-analysis
 mvn clean install
 
-Configuration
+## Configuration
 Model Setup:
-
 Place your trained model at:
-
-Copy
 src/main/resources/models/failure-classifier.bin
-Training Data:
 
-Add your training examples in:
-src/main/resources/training-data.txt
+## Training Data Format
+
+**Example:**
+element_not_found NoSuchElementException: Unable to locate element
+network_issue ConnectException: Connection refused
+assertion_failure Expected true but found false
 
 Usage
 1. Run Tests
-bash
 mvn clean test
 
 2. Train Model (Initial Setup)
 "org.example.ModelTrainer"
 
 3. Analyze Failures
-bash
 mvn exec:java -Dexec.mainClass="org.example.Main"
 
 4. View Results
 HTML Report: reports/failure-analysis.html
-
 Text Summary: reports/summary.txt
 
-Project Structure
-//TO DO
 
-category_name Error message pattern
-Example:
-element_not_found NoSuchElementException: Unable to locate element
-network_issue ConnectException: Connection refused
-assertion_failure Expected true but found false
+## Sample Report
 
-Sample Report
-HTML Report Preview
-![image](https://github.com/user-attachments/assets/43c29780-37bc-4877-8115-5ab6274f6ba7)
+![HTML Report Preview](https://github.com/user-attachments/assets/43c29780-37bc-4877-8115-5ab6274f6ba7)
 
-Dependencies
-OpenNLP 2.3.0 (NLP processing)
-Apache Commons Text 1.10.0 (Text similarity)
-Freemarker 2.3.32 (Report templating)
+## Dependencies
 
-Troubleshooting
-Common Issues
-Model File Not Found:
-Verify file exists in src/main/resources/models/
+- **OpenNLP 2.3.0** (NLP processing)
+- **Apache Commons Text 1.10.0** (Text similarity)
+- **Freemarker 2.3.32** (Report templating)
 
-Check case sensitivity in filenames
-Low Confidence Scores:
-Add more training examples
+### Common Issues
 
-Retrain model with:
-bash
-mvn exec:java -Dexec.mainClass="org.example.ModelTrainer"
+**Model File Not Found:**
+- Verify file exists in `src/main/resources/models/`
+- Check case sensitivity in filenames
 
-Empty Results:
+**Low Confidence Scores:**
+- Add more training examples
+- Retrain model with:
+  ```bash
+  "org.example.ModelTrainer"
+
+## Empty Results:
 Ensure tests actually failed
 Verify TestNG XML result file path
 
-Contribution
+## Contribution
 Contributions welcome! Please follow:
 Fork the repository
 Create your feature branch
 Commit changes with tests
 Push to the branch
-
 Open a PR
-
-Happy Testing! 🚀
