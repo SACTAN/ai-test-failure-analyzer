@@ -1,12 +1,22 @@
 Test Failure Analysis Summary
 ==============================
-Test: testCheckout
+Test: testCase2
 Category: name
 Confidence: 4.76%
-Solution: Review stack trace for patterns
+Solution: Check element locators and page loading timing
 
-Test: testPayment
+Test: testCase4
 Category: name
 Confidence: 4.76%
-Solution: Review stack trace for patterns
+Solution: Check element locators and page loading timing
+
+Test: testCase6
+Category: name
+Confidence: 4.76%
+Solution: Check element locators and page loading timing
+
+Test: testCase8
+Category: name
+Confidence: 4.76%
+Solution: Check element locators and page loading timing
 

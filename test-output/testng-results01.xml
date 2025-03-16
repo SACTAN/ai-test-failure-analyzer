@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results>
+    <suite name="Sample Test Suite">
+        <test name="Sample Test">
+            <class name="com.example.tests.SampleTest">
+
+                <!-- Passed Test Case -->
+                <test-method name="testLogin" status="PASS" duration-ms="500">
+                    <reporter-output>Login test passed successfully</reporter-output>
+                </test-method>
+
+                <!-- Failed Test Case -->
+                <test-method name="testCheckout" status="FAIL" duration-ms="800">
+                    <exception class="org.openqa.selenium.NoSuchElementException">
+                        <message>Element not found: Checkout button</message>
+                        <full-stacktrace>
+                            org.openqa.selenium.NoSuchElementException: Unable to locate element
+                            at com.example.tests.SampleTest.testCheckout(SampleTest.java:25)
+                        </full-stacktrace>
+                    </exception>
+                </test-method>
+
+                <!-- Another Passed Test Case -->
+                <test-method name="testAddToCart" status="PASS" duration-ms="300">
+                    <reporter-output>Item added to cart successfully</reporter-output>
+                </test-method>
+
+                <!-- Another Failed Test Case -->
+                <test-method name="testPayment" status="FAIL" duration-ms="600">
+                    <exception class="java.lang.AssertionError">
+                        <message>Expected payment amount mismatch</message>
+                        <full-stacktrace>
+                            java.lang.AssertionError: Expected amount $100 but found $95
+                            at com.example.tests.SampleTest.testPayment(SampleTest.java:42)
+                        </full-stacktrace>
+                    </exception>
+                </test-method>
+
+            </class>
+        </test>
+    </suite>
+</testng-results>

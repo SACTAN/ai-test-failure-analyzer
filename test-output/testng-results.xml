@@ -1,42 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testng-results>
-    <suite name="Sample Test Suite">
-        <test name="Sample Test">
+    <suite name="SampleSuite">
+        <test name="SampleTest">
             <class name="com.example.tests.SampleTest">
-
-                <!-- Passed Test Case -->
-                <test-method name="testLogin" status="PASS" duration-ms="500">
-                    <reporter-output>Login test passed successfully</reporter-output>
-                </test-method>
-
-                <!-- Failed Test Case -->
-                <test-method name="testCheckout" status="FAIL" duration-ms="800">
-                    <exception class="org.openqa.selenium.NoSuchElementException">
-                        <message>Element not found: Checkout button</message>
-                        <full-stacktrace>
-                            org.openqa.selenium.NoSuchElementException: Unable to locate element
-                            at com.example.tests.SampleTest.testCheckout(SampleTest.java:25)
-                        </full-stacktrace>
-                    </exception>
-                </test-method>
-
-                <!-- Another Passed Test Case -->
-                <test-method name="testAddToCart" status="PASS" duration-ms="300">
-                    <reporter-output>Item added to cart successfully</reporter-output>
-                </test-method>
-
-                <!-- Another Failed Test Case -->
-                <test-method name="testPayment" status="FAIL" duration-ms="600">
+                <test-method name="testCase1" status="PASS" duration-ms="120" started-at="2025-03-16T10:00:00Z" finished-at="2025-03-16T10:00:01Z"/>
+                <test-method name="testCase2" status="FAIL" duration-ms="200" started-at="2025-03-16T10:00:02Z" finished-at="2025-03-16T10:00:02Z">
                     <exception class="java.lang.AssertionError">
-                        <message>Expected payment amount mismatch</message>
-                        <full-stacktrace>
-                            java.lang.AssertionError: Expected amount $100 but found $95
-                            at com.example.tests.SampleTest.testPayment(SampleTest.java:42)
-                        </full-stacktrace>
+                        <message><![CDATA[Expected value was X but got Y]]></message>
+                        <stack-trace><![CDATA[com.example.tests.SampleTest.testCase2(SampleTest.java:25)]]></stack-trace>
                     </exception>
                 </test-method>
-
+                <test-method name="testCase3" status="PASS" duration-ms="150" started-at="2025-03-16T10:00:03Z" finished-at="2025-03-16T10:00:03Z"/>
+                <test-method name="testCase4" status="FAIL" duration-ms="180" started-at="2025-03-16T10:00:04Z" finished-at="2025-03-16T10:00:04Z">
+                    <exception class="java.lang.NullPointerException">
+                        <message><![CDATA[Null reference encountered]]></message>
+                        <stack-trace><![CDATA[com.example.tests.SampleTest.testCase4(SampleTest.java:40)]]></stack-trace>
+                    </exception>
+                </test-method>
+                <test-method name="testCase5" status="PASS" duration-ms="170" started-at="2025-03-16T10:00:05Z" finished-at="2025-03-16T10:00:05Z"/>
+                <test-method name="testCase6" status="FAIL" duration-ms="210" started-at="2025-03-16T10:00:06Z" finished-at="2025-03-16T10:00:06Z">
+                    <exception class="java.lang.ArrayIndexOutOfBoundsException">
+                        <message><![CDATA[Index out of bounds]]></message>
+                        <stack-trace><![CDATA[com.example.tests.SampleTest.testCase6(SampleTest.java:55)]]></stack-trace>
+                    </exception>
+                </test-method>
+                <test-method name="testCase7" status="PASS" duration-ms="160" started-at="2025-03-16T10:00:07Z" finished-at="2025-03-16T10:00:07Z"/>
+                <test-method name="testCase8" status="FAIL" duration-ms="220" started-at="2025-03-16T10:00:08Z" finished-at="2025-03-16T10:00:08Z">
+                    <exception class="java.lang.IllegalArgumentException">
+                        <message><![CDATA[Invalid argument passed]]></message>
+                        <stack-trace><![CDATA[com.example.tests.SampleTest.testCase8(SampleTest.java:70)]]></stack-trace>
+                    </exception>
+                </test-method>
             </class>
         </test>
     </suite>
 </testng-results>
+

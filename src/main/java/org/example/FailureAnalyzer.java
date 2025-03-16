@@ -76,7 +76,7 @@ public class FailureAnalyzer {
 
     private String suggestSolution(String category) {
         Map<String, String> knowledgeBase = Map.of(
-                "element_not_found", "Check element locators and page loading timing",
+                "name", "Check element locators and page loading timing",
                 "network_issue", "Verify API endpoints and network connectivity",
                 "assertion_failure", "Validate test data and application state"
         );

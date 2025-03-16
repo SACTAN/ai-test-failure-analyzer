@@ -5,6 +5,18 @@ import opennlp.tools.util.*;
 import java.io.*;
 
 public class ModelTrainer {
+
+    static ModelTrainer trainer = new ModelTrainer();
+    public static void main(String[] args) {
+        try {
+            trainer.retrainModelWithNewData();
+            System.out.println("Model training completed successfully.");
+        } catch (IOException e) {
+            System.err.println("Error occurred during model training: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+
     public void retrainModelWithNewData() throws IOException {
         // Load existing training data
         InputStreamFactory factory = new MarkableFileInputStreamFactory(
@@ -29,11 +41,12 @@ public class ModelTrainer {
                 params,
                 new DoccatFactory()
         );
+        String userDire = System.getProperty("user.dir");
 
         // Save updated model
         try (OutputStream modelOut =
                      new BufferedOutputStream(
-                             new FileOutputStream("models/updated-model.bin")
+                             new FileOutputStream(userDire +"\\src\\main\\resources\\models\\failure-classifier.bin")
                      )) {
             model.serialize(modelOut);
         }

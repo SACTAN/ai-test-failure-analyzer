@@ -1,3 +1,16 @@
-element_not_found NoSuchElementException: Unable to locate element
-network_issue ConnectException: Connection refused
-assertion_failure Expected 200 but found 404
+assertion_error AssertionError: Expected value was X but got Y
+assertion_error AssertionError: Expected 100 but received 99
+assertion_error AssertionError: String length mismatch
+null_pointer_exception NullPointerException: Null reference encountered in method processOrder()
+null_pointer_exception NullPointerException: Attempt to invoke method on null object
+null_pointer_exception NullPointerException: Accessing property of a null object
+array_index_out_of_bounds ArrayIndexOutOfBoundsException: Index out of bounds while accessing array element 5
+array_index_out_of_bounds ArrayIndexOutOfBoundsException: Negative index access detected
+array_index_out_of_bounds ArrayIndexOutOfBoundsException: Access beyond array size limit
+illegal_argument IllegalArgumentException: Invalid argument passed to method calculatePrice()
+illegal_argument IllegalArgumentException: Parameter 'id' must not be negative
+illegal_argument IllegalArgumentException: Expected non-empty input but received empty string
+timeout_exception TimeoutException: Test execution exceeded time limit of 5 seconds
+timeout_exception TimeoutException: Element took too long to load
+element_not_found NoSuchElementException: Unable to locate element with ID 'submit-button'
+element_not_found NoSuchElementException: Element with class 'login-field' not found
